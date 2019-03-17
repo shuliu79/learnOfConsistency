@@ -30,6 +30,9 @@ public class TransactionTest {
         System.out.println(counterService.init());
     }
 
+    /**
+     * 测试事务是否有效
+     */
     @Test
     public void testRollback(){
 
@@ -49,6 +52,10 @@ public class TransactionTest {
 
     }
 
+    /**
+     * 无事务
+     * @throws InterruptedException
+     */
     @Test
     public void incrWithoutTransaction() throws InterruptedException {
 
@@ -70,6 +77,10 @@ public class TransactionTest {
         System.out.println(counterService.getValue());
     }
 
+    /**
+     * 默认事务
+     * @throws InterruptedException
+     */
     @Test
     public void incrWithTransaction() throws InterruptedException {
 
@@ -91,6 +102,10 @@ public class TransactionTest {
         System.out.println(counterService.getValue());
     }
 
+    /**
+     * 最高隔离级别的事务
+     * @throws InterruptedException
+     */
     @Test
     public void incrSerializable() throws InterruptedException {
 
@@ -113,6 +128,10 @@ public class TransactionTest {
         System.out.println(counterService.getValue());
     }
 
+    /**
+     * 事务+一致性锁定读
+     * @throws InterruptedException
+     */
     @Test
     public void incrWithLock() throws InterruptedException {
 
