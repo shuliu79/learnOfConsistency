@@ -153,7 +153,7 @@ public class TransactionTest {
         System.out.println(counterService.getValue());
     }
 
-
-
+    //除了使用加写锁的方式，对于这里讨论的场景，通过乐观锁也可以达到一样的效果，但是写锁相对来说更具有一般性。
+    //因为有自旋等锁优化措施，悲观锁的性能也不会太差，具体的性能将性能专题中讨论。
 
 }
